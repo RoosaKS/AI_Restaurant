@@ -1,0 +1,37 @@
+.header {
+  background-color: #333; /* Tummanvihreä */
+  color: #f8f5f0; /* Vaalea teksti */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo img {
+  width: 100px; /* Mukauta logon koko tarpeen mukaan */
+  height: auto;
+}
+
+.header .logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #f8b400; /* Kultainen sävy */
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #f8f5f0;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #f8b400;
+}
+

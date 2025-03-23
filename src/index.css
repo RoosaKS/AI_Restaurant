@@ -1,0 +1,17 @@
+/* Yleiset asetukset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Playfair Display', serif; /* Elegantti ja klassinen fontti */
+  background-color: #f4f1e9; /* Pehmeä beige taustaväri */
+  color: #2b2b2b; /* Tumma teksti luettavuuden parantamiseksi */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

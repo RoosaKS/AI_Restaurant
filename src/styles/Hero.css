@@ -1,0 +1,110 @@
+/* HERO-OSIO */
+.hero {
+  position: relative;
+  background: url('../assets/images/restaurant-hero-image.jpg') center/cover no-repeat;
+  background-attachment: fixed; /* Pitää taustan paikallaan skrollatessa */
+  min-height: calc(100vh - 80px); /* Varmistaa, että Hero vie koko näkymän */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin-top: 0; /* Poistaa ylimääräisen valkoisen tilan */
+  width: 100%;
+  z-index: 1;
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.6); /* Tumma tausta */
+  color: white; /* Valkoinen teksti */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 36px; /* Tee otsikosta selkeä */
+  margin-bottom: 15px; /* Lisää tilaa H1:n ja seuraavan elementin väliin */
+}
+
+.hero-content p {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6; /* Hyvä luettavuus */
+  margin-bottom: 10px; /* Pieni väli kappaleiden väliin */
+}
+
+/* PAINIKE-TYYLIT */
+.hero-buttons {
+  margin-top: 15px;
+}
+
+.hero-buttons button {
+  margin: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f8b400;
+  color: white;
+  transition: 0.3s;
+}
+
+.hero-buttons button:hover {
+  background-color: #e09e00;
+}
+
+.hero-gallery {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 50px; /* Lisää tilaa gallerian ja seuraavan osion väliin */
+  justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+
+.hero-gallery img {
+  width: auto; /* Säilyttää kuvan alkuperäisen leveyden */
+  height: 300px; /* Asettaa korkeuden isommaksi */
+  object-fit: cover; /* Täyttää ruudun ilman valkoisia reunoja */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+/* Mosaiikkimainen asettelu */
+.hero-gallery img:nth-child(3n) {
+  grid-column: span 2;
+}
+
+.hero-gallery img:nth-child(4n) {
+  grid-row: span 2;
+}
+
+/* RESPONSIVIISUUS */
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+
+  .hero-content {
+    max-width: 90%;
+  }
+
+  .hero-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .hero-gallery img {
+    grid-column: span 1 !important;
+    grid-row: span 1 !important;
+  }
+}

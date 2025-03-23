@@ -1,0 +1,42 @@
+.events {
+    text-align: center;
+    padding: 40px;
+    background-color: #f8f8f8;
+  }
+  
+  .events h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .events-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .event-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .event-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .event-card h3 {
+    margin: 15px 0 5px;
+    font-size: 1.4rem;
+  }
+  
+  .event-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
