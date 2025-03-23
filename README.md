@@ -1,6 +1,6 @@
 # This repository is part of my thesis
 
-
+The code is fully made by AI
 
 # Getting Started with Create React App
 
