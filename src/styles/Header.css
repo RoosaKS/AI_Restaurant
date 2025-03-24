@@ -8,8 +8,9 @@
 }
 
 .logo img {
-  width: 100px; /* Mukauta logon koko tarpeen mukaan */
-  height: auto;
+  width: 80px; /* Voit säätää tarpeen mukaan */
+  height: 80px; /* Sama arvo kuin width pitää sen neliönä */
+  object-fit: contain; /* Varmistaa, että kuva ei veny */
 }
 
 .header .logo {

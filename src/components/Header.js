@@ -7,7 +7,7 @@ function Header() {
     <header className="header">
       <div className="logo">
         <a href="/">
-          <img src="/assets/images/logo.jpg" alt="Ravintolan logo" />
+        <img src={require("../assets/images/logo.png")} alt="Ravintolan logo" />
         </a>
       </div>
       <nav>
