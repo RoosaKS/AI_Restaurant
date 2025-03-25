@@ -17,7 +17,7 @@
 }
 
 .hero-content {
-  background: rgba(0, 0, 0, 0.6); /* Tumma tausta */
+  background: rgba(0, 0, 0, 0.75); /* Tummempi tausta */ /* Tumma tausta */
   color: white; /* Valkoinen teksti */
   padding: 20px;
   border-radius: 10px;
@@ -28,7 +28,10 @@
 .hero-content h1 {
   font-size: 36px; /* Tee otsikosta selkeä */
   margin-bottom: 15px; /* Lisää tilaa H1:n ja seuraavan elementin väliin */
+  color: #ffffff; /* Valkoinen teksti */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
+
 
 .hero-content p {
   color: white;
