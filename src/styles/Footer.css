@@ -1,15 +1,46 @@
 .footer {
-  background-color: #2f4f4f;
-  color: #f8f5f0;
+  background-color: #222; /* Tumma tausta */
+  color: #ffffff; /* Valkoinen teksti */
   text-align: center;
   padding: 20px;
+  font-size: 16px;
 }
 
 .footer a {
-  color: #f8b400;
+  color: #f8b400; /* Korosteväri linkeille */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer a:hover {
-  color: white;
+  color: #e09e00; /* Tummentaa väriä hover-tilassa */
+}
+
+.footer p {
+  margin: 10px 0;
+  color: #ffffff; /* Varmistetaan hyvä kontrasti */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.footer .social-icons {
+  margin-top: 10px;
+}
+
+.footer .social-icons a {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
+  color: #ffffff; /* Varmistetaan, että ikonit näkyvät */
+  transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+  color: #f8b400;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 14px;
+  }
 }
