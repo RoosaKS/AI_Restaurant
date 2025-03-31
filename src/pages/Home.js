@@ -1,4 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import Hero from "../components/Hero";
+import MenuPreview from "../components/MenuPreview";
+import Events from "../components/Events";
 import "../styles/Home.css";
 
 const reviews = [
@@ -9,13 +13,15 @@ const reviews = [
 
 function Home() {
   return (
-    <section className="home">
-      {/* Muut etusivun osiot */}
-      
+    <div className="home">
+      <Hero />
+      <MenuPreview />
+      <Events />
+
       <div className="customer-reviews">
         <h2>Asiakaspalautteet</h2>
         <div className="review-list">
-          {reviews.map((review, index) => (
+          {reviews.slice(0, 2).map((review, index) => (
             <div key={index} className="review">
               <p className="review-text">"{review.text}"</p>
               <p className="review-author">- {review.name}</p>
@@ -23,8 +29,11 @@ function Home() {
             </div>
           ))}
         </div>
+        
+        {/* Lue lisää -painike */}
+        <Link to="/reviews" className="review-button">Lue lisää palautteita</Link>
       </div>
-    </section>
+    </div>
   );
 }
 

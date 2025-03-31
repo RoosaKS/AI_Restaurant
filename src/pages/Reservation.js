@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import "../styles/Reservation.css";
 
 function Reservation() {
@@ -40,6 +41,16 @@ function Reservation() {
 
   return (
     <section className="reservation">
+      {/* Helmet SEO-optimoituun otsikkoon ja metatietoihin */}
+      <Helmet>
+        <title>Varaa pöytä | Ravintola Makunautinto</title>
+        <meta name="description" content="Varaa pöytä Ravintola Makunautinnosta helposti verkkosivuiltamme. Valitse päivä, aika ja henkilömäärä!" />
+        <meta name="keywords" content="pöytävaraus, ravintola varaus, varaa pöytä, illallinen, lounas" />
+        <meta property="og:title" content="Varaa pöytä | Ravintola Makunautinto" />
+        <meta property="og:description" content="Tee pöytävaraus helposti verkkosivujemme kautta ja nauti herkullisesta ruoasta." />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <h2>Varaa pöytä</h2>
       <p>Tee pöytävaraus helposti alla olevalla lomakkeella.</p>
 

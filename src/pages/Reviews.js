@@ -5,6 +5,8 @@ const reviews = [
   { name: "Anna M.", text: "Ihana ravintola! Ruoka oli todella herkullista.", rating: 5 },
   { name: "Mikko K.", text: "Erittäin viihtyisä tunnelma ja loistava menu!", rating: 4 },
   { name: "Laura P.", text: "Mahtava kokemus! Annokset olivat upeita.", rating: 5 },
+  { name: "Jari R.", text: "Henkilökunta oli ystävällistä ja palvelu ensiluokkaista.", rating: 5 },
+  { name: "Sari T.", text: "Suosittelen lämpimästi, loistava ravintola!", rating: 4 },
 ];
 
 function Reviews() {

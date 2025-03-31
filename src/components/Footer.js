@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "../styles/Footer.css"; // Lisää tyylitiedosto tarvittaessa
 
 function Footer() {
@@ -7,7 +6,6 @@ function Footer() {
     <footer className="footer">
       <div className="footer-info">
         <p>&copy; {new Date().getFullYear()} Ravintola Makunautinto</p>
-        <p><Link to="/reviews">Lue asiakkaidemme arvosteluja</Link></p>
         <p>Osoite: Esimerkkikatu 1, Helsinki</p>
         <p>Puhelin: 012 345 6789 | Sähköposti: info@makunautinto.fi</p>
         <p>Aukioloajat: Ma-Pe 10:00-22:00, La-Su 12:00-23:00</p>
