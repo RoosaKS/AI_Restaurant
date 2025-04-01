@@ -1,30 +1,32 @@
 .header {
-  background-color: #333; /* Tummanvihreä */
+  background-color: #333; /* Tumma tausta */
   color: #f8f5f0; /* Vaalea teksti */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  position: sticky; 
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
+/* Logo */
 .logo img {
-  width: 80px; /* Voit säätää tarpeen mukaan */
-  height: 80px; /* Sama arvo kuin width pitää sen neliönä */
-  object-fit: contain; /* Varmistaa, että kuva ei veny */
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
-.header .logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: #f8b400; /* Kultainen sävy */
-}
-
+/* Navigaatiolista */
 .header nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
+/* Navigointilinkit */
 .header nav ul li a {
   text-decoration: none;
   color: #f8f5f0;
@@ -36,6 +38,7 @@
   color: #f8b400;
 }
 
+/* Kielivalinta */
 .language-switcher {
   display: flex;
   gap: 8px;
@@ -48,6 +51,7 @@
   font-size: 16px;
   cursor: pointer;
   padding: 5px;
+  color: #f8f5f0;
   transition: opacity 0.3s ease;
 }
 
@@ -55,3 +59,44 @@
   opacity: 0.7;
 }
 
+/* 🔹 RESPONSIIVINEN MENU (Mobiilille) */
+.menu-toggle {
+  display: none; /* Piilotetaan oletuksena */
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #f8f5f0;
+  cursor: pointer;
+}
+
+/* Mobiilinavigaatio */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .menu-toggle {
+    display: block; /* Näkyy vain mobiilissa */
+  }
+
+  .header nav ul {
+    display: none; /* Piilotetaan oletuksena */
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .header nav ul.show {
+    display: flex;
+  }
+
+  .header nav ul li {
+    margin: 10px 0;
+  }
+}

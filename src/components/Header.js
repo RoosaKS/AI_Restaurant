@@ -1,33 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useTranslation } from "react-i18next"; // tuo käännökset
+import { useTranslation } from "react-i18next";
 import "../styles/Header.css";
 
 function Header() {
-  const { i18n } = useTranslation(); // käännösten käyttö
+  const { i18n, t } = useTranslation(); // Käytetään käännöksiä
+  const [menuOpen, setMenuOpen] = useState(false); // Mobiilimenu
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+    i18n.changeLanguage(lng); // Vaihdetaan kieli
+    localStorage.setItem("language", lng); // Tallennetaan käyttäjän valinta
   };
 
   return (
     <header className="header">
       <div className="logo">
-        <a href="/">
+        <Link to="/">
           <img src={require("../assets/images/logo.png")} alt="Ravintolan logo" />
-        </a>
+        </Link>
       </div>
+
+      {/* Mobiilivalikon togglaaminen */}
+      <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+        ☰
+      </button>
+
       <nav>
-        <ul>
-          <li><Link to="/">{i18n.t("home")}</Link></li>
-          <li><Link to="/menu">{i18n.t("menu")}</Link></li>
-          <li><Link to="/reservation">{i18n.t("reservation")}</Link></li>
-          <li><Link to="/contact">{i18n.t("contact")}</Link></li>
-          <li><Link to="/about">{i18n.t("about")}</Link></li>
-          <li><Link to="/gallery">{i18n.t("gallery")}</Link></li>
-          <li><Link to="/reviews">{i18n.t("reviews")}</Link></li>
+        <ul className={menuOpen ? "show" : ""}>
+          <li><Link to="/">{t("home")}</Link></li>
+          <li><Link to="/menu">{t("menu")}</Link></li>
+          <li><Link to="/reservation">{t("reservation")}</Link></li>
+          <li><Link to="/contact">{t("contact")}</Link></li>
+          <li><Link to="/about">{t("about")}</Link></li>
+          <li><Link to="/gallery">{t("gallery")}</Link></li>
+          <li><Link to="/reviews">{t("reviews")}</Link></li>
         </ul>
       </nav>
+
+      {/* Kielivalitsin */}
       <div className="language-switcher">
         <button onClick={() => changeLanguage("fi")}>🇫🇮 FI</button>
         <button onClick={() => changeLanguage("en")}>🇬🇧 EN</button>
